@@ -7,6 +7,7 @@ import Footer from './Footer.js';
 import './App.css';
 
 
+
 class App extends Component {
 
   constructor(props) {
@@ -25,7 +26,7 @@ class App extends Component {
       query: "",
       findPlaces: [],
       markerfl: null,
-      hasError: false
+      hasError: false,
     };
   }
 
@@ -50,7 +51,12 @@ class App extends Component {
 
 componentDidMount () {
   this.getLocations()
+  // alert for Google Map Api error
+  window.gm_authFailure = () => {
+      alert('Error! Google Map API FAILED! The code must to be reviewed!')
+    }
 }
+
  // On Clik marker function
   onMarkerClick(props, marker, e) {
     this.setState({
@@ -58,7 +64,9 @@ componentDidMount () {
       activeMarker: marker,
       showingInfoWindow: true,
       icon: mapMarker,
+
      });
+
   };
   // On Clik list function
   onListClick(props, marker, e) {
@@ -173,6 +181,7 @@ componentDidMount () {
           name={myMarker.name}
           animation={this.state.activeMarker ? (this.state.selectedPlace.id === myMarker.id ? '1' : '0') : '0'}
         >
+
         </Marker>
       )}
         <InfoWindow
@@ -191,7 +200,9 @@ componentDidMount () {
         )}
             </div>
         </InfoWindow>
+
       </Map>
+
        )}
   </article>
   <aside className="aside aside-1">
@@ -218,7 +229,7 @@ componentDidMount () {
                 {place.name}
               </li>
             )
-          }
+              }
         </ul>
       </div>
       </aside>
