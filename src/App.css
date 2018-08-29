@@ -1,0 +1,160 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        min-height: 50rem;
+        height: 100%;
+        position: relative;
+      }
+
+      input {
+        font-size: 0.5em;
+      }
+
+      h1 {
+        color: #002b61;
+        font-size: 1.5em;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+
+      h2 {
+             color: #002b61;
+             font-size: 1.2em;
+             margin: 0 0 10px 0;
+             text-align: center;
+           }
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.input-wrapper input {
+  height: 100%;
+  width: 94%;
+  background-color: #fff;
+  font-weight: 500;
+  padding: 0.3em;
+  font-size: 1.2em;
+  border-radius: 12px;
+  border-width: 2px;
+  border-color: #240024;
+}
+
+.header {
+  padding: 18px 0 5px 0;
+  text-align: center;
+  background-color: #fdff05;
+  font-size: 1.5em;
+}
+
+.footer {
+  padding: 20px 0 35px 0;
+  text-align: center;
+  background-color: #fdff05;
+  font-size: 1em;
+}
+
+h3 {
+       color: #002b61;
+       font-size: 1em;
+       margin: 0 0 10px 0;
+       text-align: center;
+     }
+
+.main {
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  padding: 0 0 0 0;
+}
+
+.aside-1{
+  max-width: 300px;
+  background-color: #fdff05;
+}
+
+.input-wrapper {
+  height: 35px;
+  margin: 0,5em 0 0,5em 0;
+}
+
+.filtered-list {
+  list-style: none;
+  padding: 0.3em;
+  background-color: #004e9e;
+  border-radius: 12px;
+}
+
+.filtered-list .result-item {
+  font-size: 1.3em;
+  padding: 0.3em;
+  border-bottom: 2px solid #002b61;
+  cursor: cell;
+}
+.result-item{
+  color: #fdff05;
+}
+
+.filtered-list .result-item:hover,
+.filtered-list .result-item:focus {
+  color: #000;
+  padding-left: 10px;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media all and (min-width: 640px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 820px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .footer  { order: 4; }
+}
+@media all and (max-width: 820px) {
+   .aside-1 { max-width : 820px; }
+
+}
