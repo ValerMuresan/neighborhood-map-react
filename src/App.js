@@ -179,7 +179,7 @@ componentDidMount () {
           position={myMarker.location}
           title={myMarker.title}
           name={myMarker.name}
-          animation={this.state.activeMarker ? (this.state.selectedPlace.id === myMarker.id ? '1' : '0') : '0'}
+          animation={this.state.activeMarker ? (this.state.selectedPlace.id === myMarker.id ? '1' : '1') : '0'}
         >
 
         </Marker>
@@ -196,6 +196,9 @@ componentDidMount () {
            <div key={info.id}>
            <p>{this.state.selectedPlace.id === info.id ?info.location.address : ''} </p>
            <p>{this.state.selectedPlace.id === info.id ?info.location.crossStreet : ''} </p>
+            <p>{this.state.selectedPlace.id === info.id ?info.location.city : ''} </p>
+            <p>{this.state.selectedPlace.id === info.id ?info.location.country : ''} </p>
+            <p>{this.state.selectedPlace.id === info.id ?info.location.postalCode : ''} </p>
            </div>
         )}
             </div>
